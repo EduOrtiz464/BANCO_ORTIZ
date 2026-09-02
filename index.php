@@ -18,13 +18,12 @@ switch ($accion) {
     case 'listar':
         $controlador->listarUsuarios();
         break;
-    case 'auditoria':
-        $controlador->auditoria();
-        break;
         
+    case 'auditoria':
+        echo "Auditoria no implementada.";
+        break;
     default:
-        echo "Bienvenido al Sistema Bancario . <br>";
-        echo "Prueba en la URL con: ?accion=login&u=admin&p=1234";
+        $controlador->inicio();
         break;
 }
 ?>
