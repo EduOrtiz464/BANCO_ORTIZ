@@ -3,12 +3,12 @@ class BancoController {
     private $modelo;
 
     public function __construct() {
-        $this->modelo = new UsuarioModel();
+        $this->modelo = new UsuarioModels();
     }
         public function login() {
         $user = isset($_GET['u']) ? $_GET['u'] : '';
         $pass = isset($_GET['p']) ? $_GET['p'] : '';
-        if ($user != '' && $pass != '') {
+        if ($user != '' & $pass != '') {
             $usuarioLogueado = $this->modelo->verificarLogin($user, $pass);
             
             if ($usuarioLogueado) {
