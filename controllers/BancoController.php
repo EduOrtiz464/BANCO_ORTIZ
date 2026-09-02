@@ -21,7 +21,7 @@ class BancoController {
         } else {
             echo "ADVERTENCIA: Falta ingresar usuario (u) o password (p).";
         }
-        $titulo ="login"
+        $titulo ="login";
         include "views/login.php";
     }
 
