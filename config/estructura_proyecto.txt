@@ -1,0 +1,10 @@
+banco_mvc/
+│
+├── config/
+│   └── database.php
+├── controllers/
+│   └── BancoController.php
+├── models/
+│   └── UsuarioModel.php
+├── index.php
+└── base_datos.sql
