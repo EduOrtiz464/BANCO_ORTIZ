@@ -3,7 +3,7 @@ require_once 'config/conexion.php';
 require_once 'models/UsuarioModels.php';
 require_once 'controllers/BancoController.php';
 
-$accion = isset($_GET['accion']) ? $_GET['accion'] : 'inicio';
+$accion = isset($_GET['accion']) ? $_GET['accion'] : "inicio" ;
 
 $controlador = new BancoController();
 
@@ -14,16 +14,14 @@ switch ($accion) {
     case 'retiro':
         $controlador->retiro();
         break;
- 
     case 'listar':
         $controlador->listarUsuarios();
         break;
-        
     case 'auditoria':
-        echo "Auditoria no implementada.";
+        echo "Auditoría no implementada.";
         break;
     default:
-        $controlador->inicio();
+        $controlador -> inicio ();
         break;
 }
 ?>

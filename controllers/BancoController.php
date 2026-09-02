@@ -5,6 +5,11 @@ class BancoController {
     public function __construct() {
         $this->modelo = new UsuarioModels();
     }
+
+    public function inicio() {
+        $titulo = "Inicio - BANCO_ORTIZ";
+        include 'views/inicio.php';
+    }
         public function login() {
         $user = isset($_GET['u']) ? $_GET['u'] : '';
         $pass = isset($_GET['p']) ? $_GET['p'] : '';
@@ -51,7 +56,7 @@ public function retiro() {
     public function listarUsuarios() {
         $usuarios = $this->modelo->listarUsuarios();
         $titulo = "Listado de Usuarios";
-        include 'views/usuarios.php';
+        include 'views/usuario.php';
     }
 }
 ?>
